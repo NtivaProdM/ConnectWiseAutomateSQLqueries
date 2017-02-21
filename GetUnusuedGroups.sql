@@ -1,9 +1,8 @@
 /*
 Description       : Get a quick list of unused groups.
-Source URL        : http://github.com/jesseconnr/labtech-sql-library
+Source URL        : https://github.com/NtivaProdM/ConnectWiseAutomateSQLqueries/
 Tested Versions   :
-  MySQL 5.7
-  LabTech 11.0
+  LabTech 10.5
 Table Aliases     :
   Groups                - mastergroups
 */
