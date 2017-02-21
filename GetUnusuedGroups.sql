@@ -1,10 +1,13 @@
 /*
+
 Description       : Get a quick list of unused groups.
 Source URL        : https://github.com/NtivaProdM/ConnectWiseAutomateSQLqueries/
+
 Tested Versions   :
   LabTech 10.5
 Table Aliases     :
   Groups                - mastergroups
+  
 */
 
 SELECT @GROUP_COUNT := (COUNT(*) * 5) FROM mastergroups;
