@@ -21,9 +21,8 @@ WHERE
    OR mastergroups.FullName LIKE 'Agent Types%'
    OR mastergroups.FullName LIKE 'Patching%'
    OR mastergroups.FullName LIKE 'Network Devices%'
-   OR mastergroups.FullName LIKE 'Windows Updates%'
-   OR mastergroups.FullName LIKE 'Antivirus Management%'
-   OR mastergroups.FullName LIKE 'Software Deployment%'
+#   OR mastergroups.FullName LIKE 'Antivirus Management%'
+#   OR mastergroups.FullName LIKE 'Software Deployment%'
 #   OR mastergroups.FullName LIKE 'SM%'
 #   OR mastergroups.FullName LIKE 'Client Groups%'
 #   OR mastergroups.FullName LIKE 'Cloud%'
@@ -31,7 +30,8 @@ WHERE
 #   OR mastergroups.FullName LIKE '_Svc+%'
 #   OR mastergroups.FullName LIKE '_Temp%'
 #   OR mastergroups.FullName LIKE '_Test%'
-   OR mastergroups.FullName LIKE '_TestNtiva%'); # custom groups
+#   OR mastergroups.FullName LIKE '_TestNtiva%'
+   OR mastergroups.FullName LIKE 'Windows Updates%'); # custom groups
 
 SELECT
   Groups.GroupId            AS `GroupId`,
