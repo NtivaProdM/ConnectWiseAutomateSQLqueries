@@ -35,3 +35,4 @@ FROM `mastergroups` AS Groups
   LEFT JOIN `sensorchecks` AS Searches ON Groups.AutoJoinScript = Searches.SensID
 WHERE (find_in_set(Groups.GroupId, @SAFE_GROUPS) <= 0)
 ORDER BY Groups.FullName ASC;
+
