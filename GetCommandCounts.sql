@@ -13,40 +13,40 @@
 
 /* returns the total pending commands over last 24 hours*/
 SELECT 
-RemoteCommands.Name,
-COUNT(*) AS TotalCount 
+RemoteCommands.Name AS CommandName,
+COUNT(*) AS TotalPending
 FROM Commands
 RIGHT JOIN remotecommands ON Commands.Command = remotecommands.ID
-WHERE STATUS = 0 AND `dateupdated` < DATE_SUB(NOW(), INTERVAL 24 HOUR)
+WHERE STATUS = 0 AND `dateupdated` > DATE_SUB(NOW(), INTERVAL 24 HOUR)
 GROUP BY RemoteCommands.Name
-ORDER BY totalcount DESC;
+ORDER BY totalpending DESC;
 
 /* returns the total executing commands over last 24 hours*/
 SELECT 
-RemoteCommands.Name,
-COUNT(*) AS TotalCount 
+RemoteCommands.Name AS CommandName,
+COUNT(*) AS TotalExecuting
 FROM Commands
 RIGHT JOIN remotecommands ON Commands.Command = remotecommands.ID
-WHERE STATUS = 2 AND `dateupdated` < DATE_SUB(NOW(), INTERVAL 24 HOUR)
+WHERE STATUS = 2 AND `dateupdated` > DATE_SUB(NOW(), INTERVAL 24 HOUR)
 GROUP BY RemoteCommands.Name
-ORDER BY totalcount DESC;
+ORDER BY totalexecuting DESC;
 
 /* returns the total success commands over last 24 hours*/
 SELECT 
-RemoteCommands.Name,
-COUNT(*) AS TotalCount 
+RemoteCommands.Name AS CommandName,
+COUNT(*) AS TotalSuccess 
 FROM Commands
 RIGHT JOIN remotecommands ON Commands.Command = remotecommands.ID
-WHERE STATUS = 3 AND `dateupdated` < DATE_SUB(NOW(), INTERVAL 24 HOUR)
+WHERE STATUS = 3 AND `dateupdated` > DATE_SUB(NOW(), INTERVAL 24 HOUR)
 GROUP BY RemoteCommands.Name
-ORDER BY totalcount DESC;
+ORDER BY totalsuccess DESC;
 
 /* returns the total failed commands over last 24 hours*/
 SELECT 
-RemoteCommands.Name,
-COUNT(*) AS TotalCount 
+RemoteCommands.Name AS CommandName,
+COUNT(*) AS TotalFailed 
 FROM Commands
 RIGHT JOIN remotecommands ON Commands.Command = remotecommands.ID
-WHERE STATUS = 4 AND `dateupdated` < DATE_SUB(NOW(), INTERVAL 24 HOUR)
+WHERE STATUS = 4 AND `dateupdated` > DATE_SUB(NOW(), INTERVAL 24 HOUR)
 GROUP BY RemoteCommands.Name
-ORDER BY totalcount DESC;
+ORDER BY totalfailed DESC;
