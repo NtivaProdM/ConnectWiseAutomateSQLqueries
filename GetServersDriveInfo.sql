@@ -27,4 +27,5 @@ WHERE
      AND drives.filesystem REGEXP 'ntfs|refs'
  GROUP BY
      computers.clientID
-     , computers.name;         
+     , computers.name;
+     
