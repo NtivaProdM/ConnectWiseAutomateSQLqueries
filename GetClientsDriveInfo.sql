@@ -1,3 +1,13 @@
+/*
+ Description    : Returns Drive info for all clients in Netmon
+ Source URL     : https://github.com/NtivaProdM/ConnectWiseAutomateSQLqueries
+ Returns        :
+	Client's Total Drive Size GB
+  Client's Total Drive space free GB
+  Client's Total Drive space used GB
+ Tested Versions:
+  LabTech 10.5
+ */
 
 SELECT
   clients.name AS 'Client'
