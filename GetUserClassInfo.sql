@@ -10,6 +10,7 @@
  
  SELECT
  u.Name,
+ u.UserID,
  GROUP_CONCAT(DISTINCT c.`Name`) AS `Class`,
  GROUP_CONCAT(DISTINCT g.`Name`) AS `Group`,
  u.Last_Date AS `Last Login`
