@@ -5,8 +5,8 @@
  Tested Versions:
   LabTech 10.5
  Remove the # before the WHERE to limit the search to specific folders.
- e.g. #WHERE u.FolderID = x /* for %folder% */
- */
+ e.g. #WHERE u.FolderID = x for %folder%
+*/
  
  SELECT
  u.Name,
