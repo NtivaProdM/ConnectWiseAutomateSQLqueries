@@ -8,5 +8,3 @@ ON `clients`.`ClientID` = `locations`.`ClientID`
 JOIN `plugin_webroot_locationsettings`
 ON `plugin_webroot_locationsettings`.`LocationID` = `locations`.`LocationID`
 WHERE (INSTR(Locations.Name,'Altitude') > 0);
-
-
