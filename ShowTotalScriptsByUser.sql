@@ -6,7 +6,6 @@ SELECT
 	hs.`RunByUser`,
 	lts.`ScriptName`,
 	COUNT(hs.`RunByUser`) AS 'Total Count Run'
-
 FROM 
 	h_scripts hs
 JOIN
